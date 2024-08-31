@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="Stylesheet" href="style.css">
+
+    <style>
+        .view{
+            padding-left: 15%;
+            padding-right: 15%;
+            padding-top: 100px;
+            padding-bottom: 10px;
+            margin: 75px 75px 75px 75px;
+            background-color: rgb(145, 151, 156);
+        }
+
+        .view .list{
+            list-style: none;
+        }
+
+        .view .list li{
+            line-height: 25px;
+        }
+
+        .view h2{
+            font-size: 30px;
+            font-weight: 700;
+            color: rgb(0, 0, 0);
+        }
+
+        .view p{
+            font-size: 20px;
+            font-weight: 400;
+            text-align: justify;
+            color: rgb(17, 0, 0);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo">DOA</h2>
+        <nav class="navigation">
+            <a href="admin_page.html">Home<span></span></a>
+            <a href="products.html">Products<span></span></a>
+            <a href="services.html">Services<span></span></a>
+            <a href="aboutus.html">About<span></span></a>
+            <a href="contactus.html">Contact Us<span></span></a>
+            <a href="index.html">Logout<span></span></a>
+        </nav>
+    </header>
+
+    <div class="view">
+        <ul class="list">
+            <li><h2>Query Details</h2><br>
+                <p>
+                    <img src="./images/query.jpg" width="350px"><br>
+                    To view inquiries submitted through the website from users.<br>
+                    <a href="view_query.php">View Queries</a>
+                    <br>
+                </p>
+            </li><br>
+            <li><h2>User Details</h2><br>
+                <p>
+                    <img src="./images/user.png" width="350px"><br>
+                    <a href="view_users.php">View All of Users</a>
+                    <br>
+                </p>
+            </li><br>
+        </ul>
+    </div>
+
+    <footer>
+        <section class="secf">
+            <a class="a1" href="contactus.html">Contact Us</a> |
+            <a class="a1" href="aboutus.html">About Us</a> |
+            <a class="a1" href="Terms&Conditions.html">Terms & Conditions</a>
+        </section>
+        <p class="ftp">&copy; 2024 DOA. All Right Reserved</p>
+    </footer>
+
+</body>
+</html>

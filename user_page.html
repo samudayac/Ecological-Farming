@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <link rel="Stylesheet" href="style.css">
+
+    <style>
+
+.container1{   
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 100px;
+    padding-bottom: 75px;
+    margin: 75px 75px 75px 75px;
+    background-color: rgb(145, 151, 156);
+}
+
+.container1 h2{
+    font-size: 40px;
+    color: rgb(41, 1, 1);
+}
+
+.container1 p{
+    font-size: 20px;
+    text-justify: auto;
+    color: black;
+    line-height: 30px;
+    padding: 5px;
+    text-align: justify;
+}
+
+.container1 p .read-link{
+    color: black;
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 25px;
+    padding: 6px;
+}
+
+.container1 p .read-link:hover{
+    color: green;
+    transition: 0.5s ease;
+}
+
+    .container1 .query-content form {
+    position:relative;
+    width: 20px;
+    height: 700px;
+    background: transparent;
+    border: 2px solid rgba(0, 128, 0, 0);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px grey;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform .4s ease ,height .2s ease;
+    width: 50%;
+    padding: 40px;
+    left: 25%;
+    bottom: -100px;
+    top: 15px;
+    
+}
+
+.container1 .query-content p{
+    font-size: 25px;
+    /* padding-top: 10px; */
+}
+
+.container1 .query-content label {
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.container1 .query-content .service{
+    height: 30px;
+    width: 100%;
+    font-size: 18px;
+    background: rgba(0, 128, 0, 0.185);
+    float: right;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    padding-right: 0;
+    border-radius: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.container1 .query-content input, textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.container1 .query-content textarea {
+    resize: vertical;
+    font-size: 18px;
+    
+}
+
+.container1 .query-content button {
+    border: none;
+    width: 50%;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    background: green;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.container1 .query-content button:hover {
+    background-color: #45a049;
+    transition: 0.5s ease;
+}
+
+@media(max-width:700px){
+    .query-content form{
+        height: 700px;
+    }
+
+    .query-content button{
+        width: 100%;
+        
+    }
+}
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h2 class="logo">DOA</h2>
+        <nav class="navigation">
+            <a href="user_page.html">Home<span></span></a>
+            <a href="products.html">Products<span></span></a>
+            <a href="services.html">Services<span></span></a>
+            <a href="aboutus.html">About<span></span></a>
+            <a href="contactus.html">Contact Us<span></span></a>
+            <a href="index.html">Logout<span></span></a>
+        </nav>
+    </header>
+
+    <div class="container1">
+        <h2>Ecological-Farming</h2><br>
+        <p>
+            Ecological farming, also known as agroecology or sustainable agriculture, is an approach to farming that seeks to produce food, 
+            fiber, and other agricultural products in a manner that prioritizes environmental sustainability, social equity, and economic viability. 
+            At its core, ecological farming aims to work in harmony with natural ecosystems,
+            <a class="read-link" href="view_more.html">read more...</a>
+        </p>
+
+    <!-- Query Form -->
+    <div class="query-content">       
+        <form action="query.php" method="post" autocomplete="off">
+            <p>Submit a Query</p>
+            <br>
+            <label for="full_name">Full Name: </label>
+            <input type="text" id="full_name" name="full_name" required>
+
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mobile_no">Mobile No: </label>
+            <input type="mobile_no" id="mobile_no" name="mobile_no" required aria-valuemax="10">
+
+            <label for="service">Service: </label>
+            <div class="service-box">
+                <select id="service" name="service">
+                    <option selected value="select">Select Service Type</option>
+                    <option value="Information on organic farming practices">Information On Organic Farming Practices</option>
+                    <option value="Training and workshops">Training & Workshops</option>
+                    <option value="Access to resources">Access To Resources</option>
+                    <option value="Consultation services">Consultation Services</option>
+                    <option value="Certification Assistance">Certification Assistance</option>
+                    <option value="Marketplace for organic products">Marketplace For Organic Products</option>
+                    <option value="Community forums and networking">Community Forums & Networking</option>
+                    <option value="Weather and crop advisory">Weather & Crop Advisory</option>
+                </select>           
+            </div>
+
+            <label for="message">Message: </label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" name="submit">Submit Query</button>
+        </form>
+    </div>
+    </div>
+
+    <footer>
+        <section class="secf">
+            <a class="a1" href="contactus.html">Contact Us</a> |
+            <a class="a1" href="aboutus.html">About Us</a> |
+            <a class="a1" href="Terms&Conditions.html">Terms & Conditions</a>
+        </section>
+        <p class="ftp">&copy; 2024 DOA. All Right Reserved</p>
+    </footer>
+
+</body>
+</html>
